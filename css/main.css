@@ -1,0 +1,710 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);			/* droid sans */
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);		/* droid sans mono */
+
+@font-face {
+    font-family: 'social';
+    src: url('../fonts/social_shapes-webfont.eot');
+    src: url('../fonts/social_shapes-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/social_shapes-webfont.woff2') format('woff2'),
+         url('../fonts/social_shapes-webfont.woff') format('woff'),
+         url('../fonts/social_shapes-webfont.ttf') format('truetype'),
+         url('../fonts/social_shapes-webfont.svg#social_shapesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* COLORS:
+
+orange    	#E47128
+yellow    	#E5AD24
+light blue	#62AEB2
+dark blue	#00878F
+brown		#8C7965
+
+*/
+
+/* ELEMENT SELECTORS */
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	box-sizing: border-box;
+	font: 1em 'droid sans', 'segoe ui', sans-serif;
+}
+
+h1 {
+	text-transform: uppercase;
+	padding: 4px 4px 2px;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 40px;
+	display: inline-block;
+	background-color: #00878F;
+}
+
+header {
+	color: #fff;
+	font-family: 'droid sans', arial, helvetica, sans-serif;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	cursor: default;
+	position: relative;
+	z-index: 10;
+	margin-top: -200px;
+}
+
+header p {
+	display: table;
+	background-color: #8C7965;
+	/*position: relative;*/
+	top: 50px;
+	margin: 2px auto 0;
+	padding: 2px 8px;
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+	text-transform: uppercase;
+}
+
+nav {
+	background-color: rgba(0,0,0,0.0);
+	position: absolute;
+	z-index: 5;
+	top: 40px;
+	right: 0;
+	width: auto;
+	padding-bottom: 40px;
+	padding-top: 80px;
+	padding-left: 50px;
+	padding-right: 55px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	transform-origin: 100% 0; 
+	font-size: 24px;
+	text-align: right;
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+	text-transform: uppercase;
+	display: none;
+}
+
+nav li {
+	list-style: none;
+	margin-bottom: 2px;
+}
+
+nav a {
+	color: #fff;
+	background-color: #00878F;
+	text-decoration: none;
+	transition: left .25s ease-out;
+	padding: 0 6px;
+}
+
+nav a:hover {
+	background-color: #E5AD24;
+	margin-right: 20px;
+	transition: margin 1s cubic-bezier(0,1.45,.6,.94);
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+}
+
+/* CLASS SELECTORS */
+
+.interface {
+	z-index: 10;
+}
+
+.st1{
+	fill:#04979C;
+}
+
+.st2{
+	fill:#04979C;
+	stroke:#04979C;
+	stroke-width:16.6189;
+}
+
+.flip {
+	transform: rotateY(180deg) !important;
+}
+
+.flipReverse {
+	transform: rotateY(0deg) !important;
+}
+
+/* ID SELECTORS */
+
+#wrapper {
+	perspective: 2000px;
+	width: 100%;
+    height: 100vh;
+    overflow: hidden;
+	position: relative;
+}
+
+#h1Container {
+	margin: 0 auto;
+	display: table;
+}
+
+#sectionName {
+	background-color: #E47128;
+	font-size: 40px;
+	display: none;
+	margin-left: -2px;
+	text-transform: uppercase;
+	padding: 4px 8px 2px;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 40px;
+}
+
+/* IC SECTION */
+
+#IC-section {
+	perspective: 4000px;
+	transform-style: preserve-3d;
+	position: absolute;
+	z-index: 10;
+	left: 30vw;
+	top: 35vh;
+	width: 560px;
+	transform: rotateY(-180deg);
+	transition: transform 2s cubic-bezier(.1,.99,.1,.99);
+}
+
+#IC-front {
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+#IC-front h2 {
+	text-transform: uppercase;
+	padding: 4px 8px 2px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 40px;
+	background-color: #E5AD24;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 22vh;
+}
+
+#IC-front p {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+	width: 50%;
+	background-color: #62AEB2;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+	top: 48%;
+}
+
+#IC-front ul {
+	color: #fff;
+	list-style-type: square;
+	background-color: #8C7965;
+	padding: 10px;
+	padding-left: 24px;
+	margin-left: -2px;
+	display: inline-block;
+	position: relative;
+	top: -44px;
+}
+
+#IC-front li {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+}
+
+/* ICSP SECTION */
+
+#ICSP-section {
+	perspective: 4000px;
+	transform-style: preserve-3d;
+	position: absolute;
+	z-index: 10;
+	left: 32vw;
+	top: 28vh;
+	width: 560px;
+	transform: rotateY(-180deg);
+	transition: transform 2s cubic-bezier(.1,.99,.1,.99);
+}
+
+#ICSP-front {
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+#ICSP-front h2 {
+	text-transform: uppercase;
+	padding: 4px 8px 2px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 40px;
+	background-color: #E5AD24;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 22vh;
+}
+
+#ICSP-front p {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+	width: 50%;
+	background-color: #62AEB2;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+	top: 48%;
+}
+
+#ICSP-front ul {
+	color: #fff;
+	list-style-type: square;
+	background-color: #8C7965;
+	width: 49%;
+	padding: 10px;
+	padding-left: 24px;
+	margin-left: -2px;
+	display: inline-block;
+	position: relative;
+	top: -44px;
+}
+
+#ICSP-front li {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+}
+
+/* IO Pins SECTION */
+
+#Pins-section {
+	perspective: 4000px;
+	transform-style: preserve-3d;
+	position: absolute;
+	z-index: 10;
+	left: 32vw;
+	top: 32vh;
+	width: 560px;
+	transform: rotateY(-180deg);
+	transition: transform 2s cubic-bezier(.1,.99,.1,.99);
+}
+
+#Pins-front {
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+#Pins-front h2 {
+	text-transform: uppercase;
+	padding: 4px 8px 2px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 40px;
+	background-color: #E5AD24;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 19vh;
+}
+
+#Pins-front p {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+	width: 50%;
+	background-color: #62AEB2;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+}
+
+#Pins-front ul {
+	color: #fff;
+	list-style-type: square;
+	background-color: #8C7965;
+	width: 49%;
+	padding: 10px;
+	padding-left: 24px;
+	margin-left: -2px;
+	display: inline-block;
+	position: relative;
+	top: -88px;
+}
+
+#Pins-front li {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+}
+
+/* Power SECTION */
+
+#Power-section {
+	perspective: 4000px;
+	transform-style: preserve-3d;
+	position: absolute;
+	z-index: 10;
+	left: 33vw;
+	top: 18vh;
+	width: 560px;
+	transform: rotateY(-180deg);
+	transition: transform 2s cubic-bezier(.1,.99,.1,.99);
+}
+
+#Power-front {
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+#Power-front h2 {
+	text-transform: uppercase;
+	padding: 4px 8px 2px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 40px;
+	background-color: #E5AD24;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 38vh;
+}
+
+#Power-front p {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+	width: 50%;
+	background-color: #62AEB2;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+}
+
+#Power-front ul {
+	color: #fff;
+	list-style-type: square;
+	background-color: #8C7965;
+	width: 49%;
+	padding: 10px;
+	padding-left: 24px;
+	margin-left: -2px;
+	display: inline-block;
+	position: relative;
+	top: -22px;
+}
+
+#Power-front li {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+}
+
+/* USB SECTION */
+
+#USB-section {
+	perspective: 4000px;
+	transform-style: preserve-3d;
+	position: absolute;
+	z-index: 10;
+	left: 26vw;
+	top: 30vh;
+	width: 560px;
+	transform: rotateY(-180deg);
+	transition: transform 2s cubic-bezier(.1,.99,.1,.99);
+}
+
+#USB-front {
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+#USB-front h2 {
+	text-transform: uppercase;
+	padding: 4px 8px 2px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 40px;
+	background-color: #E5AD24;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 32vh;
+}
+
+#USB-front p {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+	width: 50%;
+	background-color: #62AEB2;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+}
+
+#USB-front ul {
+	color: #fff;
+	list-style-type: square;
+	background-color: #8C7965;
+	width: 49%;
+	padding: 10px;
+	padding-left: 24px;
+	margin-left: -2px;
+	display: inline-block;
+	position: relative;
+	top: -22px;
+}
+
+#USB-front li {
+	font-family: 'droid sans mono', 'segoe ui', sans-serif;
+}
+
+/* END SECTION STYLES */
+
+#sandbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#navicon {
+	position: absolute;
+	top: 50px;
+	right: -200px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+#logo {
+	width: 20vw;
+	height: auto;
+	margin: 0 auto;
+	position: absolute;
+	top: 30vh;
+	left: 40vw;
+	z-index: 10;
+}
+
+#bottom-bar, #middle-bar, #top-bar {
+	fill: #00878F;
+}
+
+#naviconHitbox {
+	opacity: 0;
+}
+
+#navHitbox {
+	background-color: #fff;
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	opacity: 1;
+	overflow: visible;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+}
+
+#infinityPath{
+	fill:none;
+	stroke:#04979C;
+	stroke-width:42.2174;
+	animation: animateStroke 2s linear infinite reverse;
+}
+
+#arduino-text {
+	opacity: 0;
+	fill: #04979C;
+}
+
+#loading-text {
+	opacity: 1;
+	fill: #04979C;
+}
+
+#share {
+	position: absolute;
+	z-index: 10;
+	bottom: 50px;
+	left: -600px;
+	height: 50px;
+}
+
+#share li {
+	margin-right: -4px;
+	list-style: none;
+	display: inline-block;
+	margin: 5px 0;
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+}
+/*
+#share li:not([id="shareIcon"]) {
+	display: none;
+}*/
+
+#share a {
+	text-decoration: none;
+	color: #00878F;
+	font: 74px 'social', sans-serif;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	margin-left: -2px;
+	transform: rotateZ(0deg);
+	transform-origin: 100% 100%;
+}
+
+#share a:hover, #share li:hover {
+	color: #E5AD24;
+	transform: rotateZ(10deg);
+	transition: transform 1s cubic-bezier(0,1.45,.6,.94);
+}
+
+#cta {
+	height: 50px;
+	position: absolute;
+	bottom: 50px;
+	right: -200px;
+	background-color: #E47128;
+	z-index: 10;
+	border: none;
+	color: #fff;
+	padding: 10px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+#cta:hover {
+	background-color: #E5AD24;
+	perspective: 500px;
+	transform: rotateY(20deg);
+	transition: transform 1s cubic-bezier(0,1.45,.6,.94);
+}
+
+/* ANIMATION */
+
+@keyframes loadingToLogo {
+	0% {
+		
+	}
+	100% {
+		width: 60px;
+		top: 53px;
+		left: 50px;
+	}
+}
+
+@keyframes fadeOut {
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}	
+}
+
+@keyframes animateStroke
+{
+	0% {
+		stroke-dashoffset: 0;			/*0*/
+		stroke-dasharray: 500;			/*500*/
+	}
+	100% {
+		stroke-dashoffset: 1000;		/*1000*/
+		stroke-dasharray: 500;			/*500*/
+	}
+}
+
+@keyframes endStrokeAnimation
+{
+	0% {
+		stroke-dashoffset: 0;		/*1000*/
+		stroke-dasharray: 500;			/*500*/
+	}
+	100% {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 2500;
+	}
+}
+
+@keyframes pushLeft {
+	0% {
+		/* margin and position is set initially to -200px from the right in the #navicon and #cta css rules */
+	}
+	100% {
+		right: 50px;
+	}
+}
+
+@keyframes pushRight {
+	0% {
+		/* position is set initially to -200px from the left in the #share css rule */
+	}
+	100% {
+		left: 50px;
+	}
+}
+
+@keyframes pushDown {
+	0% {
+		/* margin is set initially to -200px from the top in the header css rule */
+	}
+	100% {
+		margin-top: 50px;
+	}
+}
+
+@keyframes growWide {
+	0% {
+		width: 0px;
+	}
+	100% {
+		width: 1000px;
+	}
+}
+
+@keyframes flipToBack {
+	0% {
+		transform: rotateY(0deg);
+		/*backface-visibility: hidden;*/
+	}
+	100% {
+		transform: rotateY(180deg);
+		/*backface-visibility: visible;*/
+	}
+}
+
+@keyframes flipToFront {
+	100% {
+		transform: rotateY(180deg);
+		/*backface-visibility: visible;*/
+	}
+}
+
+@keyframes flip {
+	0% {
+		transform: rotateY(0deg);
+		backface-visibility: hidden;
+	}
+	100% {
+		transform: rotateY(180deg);
+		backface-visibility: visible;
+	}
+}

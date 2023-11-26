@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 397 121.5" style="enable-background:new 0 0 397 121.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#00878F;}
+	.st1{fill:#E47128;}
+	.st2{fill:#E5AD24;}
+	.st3{fill:none;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:none;stroke:#E5AD24;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+	.st7{fill:#62AEB2;}
+	.st8{fill:none;stroke:#E47128;stroke-miterlimit:10;}
+	.st9{fill:#8C7965;}
+	.st10{fill:#FF0000;}
+</style>
+
+<g id="Layer_1">
+	<rect id="initialBox" x="86.1" y="40.5" class="st4" width="200" height="50"/>
+	<polygon id="rightArrow" class="st10" points="218,124 243,63.3 218,2.5 397,63.3 	"/>
+	<polygon id="leftArrow" class="st10" points="175.8,121.5 0,60.8 175.8,0 152,60.8 	"/>
+</g>
+</svg>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+orange    	#E47128
+yellow    	#E5AD24
+light blue	#62AEB2
+dark blue	#00878F
+brown		#8C7965
+
+-->
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style>
+	.st0{fill:url(#background-gradient);}
+	.st1{opacity:0.15;}
+	.st2{opacity:0.22;}
+	.st3{opacity:0.28;}
+	.st4{opacity:0.38;}
+	.st5{opacity:0.13;}
+	.st6{opacity:0.16;}
+	.st7{opacity:5.000000e-002;}
+	.st8{opacity:0.32;}
+	.st9{opacity:0.49;}
+	.st10{opacity:0.3;}
+	.st11{opacity:0.19;}
+	.st12{opacity:3.000000e-002;}
+	.st13{opacity:0;}
+	.st14{opacity:0.21;}
+	.st15{opacity:0.37;}
+	.st16{opacity:0.17;}
+	.st17{opacity:0.36;}
+	.st18{opacity:0.26;}
+	.st19{opacity:0.27;}
+	.st20{opacity:0.39;}
+	.st21{opacity:0.2;}
+	
+	linearGradient stop[offset="0"]{
+		animation: offset0Change 30s linear alternate infinite;
+		/*stop-color: #f0f;*/		
+	}
+	
+	linearGradient stop[offset="1"]{
+		animation: offset1Change 15s linear alternate infinite;
+		/*stop-color: #0ff;*/
+	}
+	
+	@keyframes offset0Change {
+		0% {
+			stop-color: #E47128; /* orange */
+		}
+		100% {
+			stop-color: #00878F;	/* dark blue */
+		}
+	}
+	
+	@keyframes offset1Change {
+		0% {
+			stop-color: #E5AD24;	/* yellow */
+		}
+		100% {
+			stop-color: #62AEB2;	/* light blue */
+		}
+	}
+	
+</style>
+<linearGradient id="background-gradient" gradientUnits="userSpaceOnUse" x1="-169" y1="511" x2="2143" y2="511">
+	<stop offset="0"/>
+	<stop offset="1"/>
+</linearGradient>
+<rect id="background" x="-169" y="-171" class="st0" width="2312" height="1364"/>
+<g id="shapes">
+	<polygon id="s27" class="st1" points="227,147 617,673 1241,325 635,129 	"/>
+	<polygon id="s26" class="st2" points="1241,325 617,673 823,857 	"/>
+	<polygon id="s25" class="st3" points="1839,205 1313,481 1883,411 2037,173 	"/>
+	<polygon id="s24" class="st4" points="635,129 387,55 227,147 	"/>
+	<polygon id="s23" class="st3" points="299,954 617,673 823,857 	"/>
+	<polygon id="s22" class="st5" points="823,857 299,954 1505,1133 	"/>
+	<polygon id="s21" class="st2" points="823,857 1313,481 1505,1133 	"/>
+	<polygon id="s20" class="st6" points="1313,481 1883,411 2036,673 	"/>
+	<polygon id="s19" class="st7" points="1313,481 2036,673 1675,807 1505,1133 	"/>
+	<polygon id="s18" class="st8" points="1675,807 1505,1133 1839,1003 2036,673 	"/>
+	<polygon id="s17" class="st9" points="2036,673 1839,1003 1505,1133 1991,1133 	"/>
+	<polygon id="s16" class="st7" points="617,673 299,954 381,617 227,147 	"/>
+	<polygon id="s15" class="st10" points="227,147 381,617 299,954 137,481 	"/>
+	<polygon id="s14" class="st1" points="89,-25 227,147 387,55 315,-93 	"/>
+	<polygon id="s13" class="st11" points="137,481 299,954 -83,795 	"/>
+	<polygon id="s12" class="st12" points="299,954 1505,1133 -45,1123 	"/>
+	<polygon id="s11" class="st13" points="315,-93 387,55 1241,325 977,75 	"/>
+	<polygon id="s10" class="st14" points="1241,325 977,75 1297,-79 	"/>
+	<polygon id="s9" class="st12" points="1241,325 1297,-79 1839,205 	"/>
+	<polygon id="s8" class="st15" points="1839,205 2037,173 1955,-85 	"/>
+	<polygon id="s7" class="st16" points="1297,-79 1839,205 1955,-85 	"/>
+	<polygon id="s6" class="st17" points="227,147 137,481 -83,795 89,-25 	"/>
+	<polygon id="s5" class="st18" points="315,-93 977,75 1297,-79 	"/>
+	<polygon id="s4" class="st19" points="89,-25 -83,795 -83,-65 	"/>
+	<polygon id="s3" class="st20" points="2037,173 2036,673 1883,411 	"/>
+	<polygon id="s2" class="st21" points="-83,795 299,954 -45,1123 	"/>
+	<polygon id="s1" class="st1" points="823,857 1241,325 1839,205 1313,481 	"/>
+</g>
+</svg>
